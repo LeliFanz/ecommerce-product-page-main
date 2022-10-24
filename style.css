@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+--Orange: hsl(26, 100%, 55%);
+--Pale_orange: hsl(25, 100%, 94%);
+--Very_dark_blue: hsl(220, 13%, 13%);
+--Dark_grayish_blue: hsl(219, 9%, 45%);
+--Grayish_blue: hsl(220, 14%, 75%);
+--Light_grayish_blue: hsl(223, 64%, 98%);
+--White: hsl(0, 0%, 100%);
+/* (with 75% opacity for lightbox background) */
+--Black: hsl(0, 0%, 0%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Big Shoulders Display", cursive;
+  font-family: "Kumbh Sans", sans-serif;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.navbar {
+  width: 95%;
+  margin: auto;
+  border-bottom: 1px solid var(--Grayish_blue);
+}
+.nav-item:hover {
+  border-bottom: 2px solid var(--Orange);
+}
+
+section {
+  width: 100%;
+  padding: 30px 100px;
+}
+.card-img-top {
+  width: 100% !important;
+}
+.image img {
+  border: 2px solid var(--White) !important;
+  border-radius: 10px !important;
+  cursor: pointer;
+}
+.image img:hover {
+  border: 2px solid var(--Orange) !important;
+  opacity: 50%;
+}
+
+.col-detalle {
+  margin-top: 50px !important;
+
+}
+.card-marca {
+  color: var(--Orange);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.card-titulo {
+  font-weight: bold !important;
+}
+
+.precio {
+  color: var(--Black);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.porcent {
+  background-color: var(--Pale_orange);
+  padding: 3px 10px ;
+  margin-left: 10px;
+  border-radius: 5px;
+  color: var(--Orange);
+  font-weight: bold;
+}
+.precio_off {
+  text-decoration: line-through;
+  color: var(--Grayish_blue);
+  margin: 20px 0 60px ;
+}
+
+.input-group {
+  background-color: var(--Light_grayish_blue);
+  border-radius: 5px;
+}
+.input-group input {
+  background-color: var(--Light_grayish_blue);
+  color: var(--Black);
+  font-weight: bold;
+}
+.input-group button{
+  border: 0 !important;
+}
+.input-group button:hover{
+  opacity: 50%;
+  background-color: var(--White);
+}
+.input-group input {
+  border: 0 !important;
+  text-align: center;
+}
+.button {
+  color: var(--Orange) !important;
+}
+.button .btn {
+  padding: 15px;
+  font-size: 0.8rem;
+  background-color: var(--Orange);
+  color: var(--White);
+}
+.button .btn:hover {
+  background-color: var(--Orange);
+  color: var(--White);
+  opacity: 50%;
+}
+@media screen and (max-width:991px){
+  section {
+    width: 100%;
+    padding: 10px 50px 
+  }
+}
+@media screen and (max-width:768px){
+  .navbar {
+  width: 100%;
+  }
+  section {
+  padding: 0; 
+}
+  .button .btn {
+  margin-top: 10px;
+  }
+
+}
