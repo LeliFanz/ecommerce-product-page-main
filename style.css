@@ -33,6 +33,15 @@
 .nav-item:hover {
   border-bottom: 2px solid var(--Orange);
 }
+.position-absolute {
+  background-color: var(--Orange);
+}
+.navbar-nav img {
+  margin-left: 20px;
+}
+.navbar-nav img:hover {
+  border: 2px solid var(--Orange) !important;
+}
 
 section {
   width: 100%;
@@ -53,12 +62,13 @@ section {
 
 .col-detalle {
   margin-top: 50px !important;
-
+  padding: 2rem;
 }
 .card-marca {
   color: var(--Orange);
   font-size: 0.9rem;
   text-transform: uppercase;
+  margin-bottom: 20px !important;
 }
 .card-titulo {
   font-weight: bold !important;
@@ -129,9 +139,17 @@ section {
   }
   section {
   padding: 0; 
-}
+  }
   .button .btn {
   margin-top: 10px;
+  }
+  .col-detalle {
+  margin-top: 0px !important;
+  width: 90% !important;
+  margin: auto;
+  }
+  .image img {
+    display: none;
   }
 
 }

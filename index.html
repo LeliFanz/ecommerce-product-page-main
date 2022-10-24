@@ -12,7 +12,7 @@
 
 </head>
 <body>
-  <nav class="navbar navbar-expand-md pb-0 pt-4 px-5">
+  <nav class="navbar navbar-expand-md pb-0 pt-4">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -45,32 +45,41 @@
           <ul class="navbar-nav list-group list-group-horizontal">
             <li>
               <a class="nav-link position-relative" href="#"><svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" fill-rule="nonzero"/></svg>
-                <span class="position-absolute top-10 start-100 translate-middle badge rounded-pill bg-warning">
-                  9
-                </span>
+                <span class="position-absolute top-10 start-100 translate-middle badge rounded-pill"></span>
               </a>
             </li>
             <li>
               <a href="#">
-                <img class="border border-orange border-3 rounded-circle ms-4" src="images/image-avatar.png" width="40" height="40" alt="">
+                <img class="border border-orange border-3 rounded-circle" src="images/image-avatar.png" width="40" height="40" alt="">
               </a>
             </li>
           </ul>
     </div>
   </nav>
+  <div class="carrito">
+    <div class="card">
+      <div class="card-title">
+        Cart
+        <hr>
+        <div class="card-body">
+          Your cart is empty.
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section>
-    <div class="row p-5">
+    <div class="row">
       <div class="col-12 col-md-6 pt-5">
         <img class="card-img-top mb-4 rounded" src="images/image-product-1.jpg" alt="">
         <div class="row m-0 image">
-          <img class="col-3 g-0 border rounded" src="images/image-product-1-thumbnail.jpg" alt="">
-          <img class="col-3 g-0 border rounded" src="images/image-product-2-thumbnail.jpg" alt="">
-          <img class="col-3 g-0 border rounded" src="images/image-product-3-thumbnail.jpg" alt="">
-          <img class="col-3 g-0 border rounded" src="images/image-product-4-thumbnail.jpg" alt="">
+          <img class="col-3 g-0 border rounded" src="images/image-product-1.jpg" alt="">
+          <img class="col-3 g-0 border rounded" src="images/image-product-2.jpg" alt="">
+          <img class="col-3 g-0 border rounded" src="images/image-product-3.jpg" alt="">
+          <img class="col-3 g-0 border rounded" src="images/image-product-4.jpg" alt="">
         </div>
       </div>
-      <div class="col-12 col-md-6 ps-4 col-detalle">
+      <div class="col-12 col-md-6 ps-5 col-detalle">
         <h5 class="card-marca">Sneaker Company</h5>
         <h1 class="card-title mb-4">Fall Limited Edition Sneakers</h1>
         <p class="card-text">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
@@ -79,13 +88,13 @@
         <div class="row">
           <div class="input col-12 col-md-6 col-lg-5">
             <div class="input-group p-2">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon1"><svg width="12" height="4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" id="a"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a"/></svg></button>
+            <button class="btn btn-outline-secondary button-addon1" type="button" id="button-addon1"><svg width="12" height="4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" id="a"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a"/></svg></button>
             <input type="text" class="form-control" placeholder="" value="0" aria-label="Example text with button addon" aria-describedby="button-addon1">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon1"><svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z" id="b"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b"/></svg></button>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z" id="b"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b"/></svg></button>
             </div>
           </div>
           <div class="d-grid col-12 col-md-6 col-lg-7 button">
-          <button class="btn"><span class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+          <button class="btn" id="addToCar"><span class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
 </svg></span> Add to cart</button>
           </div>
@@ -119,5 +128,6 @@
     Coded by <a href="#">Your Name Here</a>.
   </div>
  -->
+ <script src="main.js"></script>
 </body>
 </html>
