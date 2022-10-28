@@ -50,6 +50,7 @@
   right: 30px;
   margin: -10px;
   display: none;
+  z-index: 1000;
 }
 .carrito #cart_compra {
   font-weight: normal;
@@ -67,6 +68,7 @@
 }
 .carrito .cart_producto {
   padding-left: 5px;
+  padding-right: 5px;
 }
 .carrito .li_cart_subtotal {
   font-weight: bold;
@@ -74,14 +76,29 @@
 .carrito .cart_subtotal {
   font-weight: bold;
 }
-
-
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 50px;
+}
+/* imagenes */
 section {
   width: 100%;
   padding: 30px 100px;
 }
+.slider {
+  position: relative;
+  width: 50%;
+}
 .card-img-top {
-  width: 100% !important;
+  width: 100%;
+  border-radius: 25px !important;
+  margin-bottom: 1rem;
+}
+.image {
+  display: flex;
+  width: 100%;
 }
 .image img {
   border: 2px solid var(--White) !important;
@@ -92,9 +109,28 @@ section {
   border: 2px solid var(--Orange) !important;
   opacity: 50% !important;
 }
+.slide_btn {
+  position: absolute;
+  display: none;
+  top: 40%;
+  padding: 1rem;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 3rem;
+}
+.slide_btn > a {
+  display: block;
+  color: var(--Dark_grayish_blue);
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+.slide_btn > a:hover {
+  color: var(--Orange);
+}
 
+/* columna detalle */
 .col-detalle {
-  margin-top: 50px !important;
+  width: 50%;
   padding: 2rem;
 }
 .card-marca {
@@ -163,7 +199,6 @@ section {
 }
 @media screen and (max-width: 991px) {
   section {
-    width: 100%;
     padding: 10px 50px;
   }
 }
@@ -174,8 +209,17 @@ section {
   section {
     padding: 0;
   }
+  .contenedor {
+    width: 100%;
+  }
   .button .btn {
     margin-top: 10px;
+  }
+  .slider {
+    width: 100%;
+  }
+  .card-img-top {
+    border-radius: 0 !important;
   }
   .col-detalle {
     margin-top: 0px !important;
@@ -185,4 +229,13 @@ section {
   .image img {
     display: none;
   }
+.carrito {
+  width: 95%;
+  top: 150px;
+  left: 5%;
+  display: none;
+}
+.slide_btn {
+  display: flex;
+}
 }
