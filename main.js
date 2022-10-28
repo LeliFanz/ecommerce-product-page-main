@@ -37,14 +37,14 @@ imagenGrande.src = imagenDefault.src;
 let i = imagenDefault.id;
 // modificando las imagenes pouch
 imagenChica.addEventListener("click", (e) => {
-  for (let i = 0; i < imagencita.length; i++){
+  for (let i = 0; i < imagencita.length; i++) {
     imagencita[i].classList.remove("active");
     imagencita[i].style.opacity = "1";
   }
   e.target.classList.add("active");
   imagenGrande.src = e.target.src;
   e.target.style.opacity = "50%";
-  i = e.target.id
+  i = e.target.id;
 });
 // modificando las imagenes slider
 slide_btn.addEventListener("click", (e) => {
@@ -93,11 +93,11 @@ botonAddToCar.addEventListener("click", () => {
 });
 // delete de la cesta
 cart_delete.addEventListener("click", () => {
-    cart_cantidad.textContent = 0;
-    cart_vacio.style.display = "block";
-    cart_compra.style.display = "none";
-    cart_badge.textContent = cart_cantidad.textContent;
-    cart_checkout.style.display = "none";  
+  cart_cantidad.textContent = 0;
+  cart_vacio.style.display = "block";
+  cart_compra.style.display = "none";
+  cart_badge.textContent = cart_cantidad.textContent;
+  cart_checkout.style.display = "none";
 });
 
 // Mostrar carrito
@@ -112,7 +112,7 @@ cart.addEventListener("click", () => {
     cart_checkout.style.display = "block";
   } else {
     cart_compra.style.display = "none";
-    cart_checkout.style.display = "none";  
+    cart_checkout.style.display = "none";
     cart_vacio.style.display = "block";
   }
 });
@@ -127,7 +127,7 @@ function limpiarStyle() {
 function cambiarImagenPrevious(e) {
   e.preventDefault();
   imagencita[i].classList.remove("active");
-  i--
+  i--;
   if (i < 0) {
     i = imagencita.length - 1;
   }
@@ -136,13 +136,13 @@ function cambiarImagenPrevious(e) {
   imagenGrande.src = imagenDefault.src;
 }
 function cambiarImagenNext(e) {
-    e.preventDefault();
-    imagencita[i].classList.remove("active");
-    i++
-    if (i == imagencita.length) {
-      i = 0
-    }
-    imagencita[i].classList.add("active");
-    let imagenDefault = document.querySelector(".active");
-    imagenGrande.src = imagenDefault.src;
+  e.preventDefault();
+  imagencita[i].classList.remove("active");
+  i++;
+  if (i == imagencita.length) {
+    i = 0;
   }
+  imagencita[i].classList.add("active");
+  let imagenDefault = document.querySelector(".active");
+  imagenGrande.src = imagenDefault.src;
+}

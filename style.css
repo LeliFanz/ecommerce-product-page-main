@@ -186,13 +186,15 @@ section {
 .button {
   color: var(--Orange) !important;
 }
-.button .btn, .carrito .cart_checkout {
+.button .btn,
+.carrito .cart_checkout {
   padding: 15px;
   font-size: 0.8rem;
   background-color: var(--Orange);
   color: var(--White);
 }
-.button .btn:hover, .carrito .cart_checkout:hover {
+.button .btn:hover,
+.carrito .cart_checkout:hover {
   background-color: var(--Orange);
   color: var(--White);
   opacity: 50%;
@@ -229,13 +231,13 @@ section {
   .image img {
     display: none;
   }
-.carrito {
-  width: 95%;
-  top: 150px;
-  left: 5%;
-  display: none;
-}
-.slide_btn {
-  display: flex;
-}
+  .carrito {
+    width: 95%;
+    top: 150px;
+    left: 5%;
+    display: none;
+  }
+  .slide_btn {
+    display: flex;
+  }
 }
