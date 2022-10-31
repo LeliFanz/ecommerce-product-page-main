@@ -5,6 +5,13 @@ let imagencita = document.querySelectorAll(".col-3");
 let slide_btn = document.querySelector(".slide_btn");
 let previous_btn = document.querySelector(".previous_btn");
 let next_btn = document.querySelector(".next_btn");
+// modificando las imagenes modals
+let modals_imagenGrande = document.querySelector(".modals .card-img-top");
+let modals_imagenChica = document.querySelector(".modals .image");
+let modals_imagencita = document.querySelectorAll(".modals .col-3");
+let modals_slide_btn = document.querySelector(".modals .slide_btn");
+let modals_previous_btn = document.querySelector(".modals .previous_btn");
+let modals_next_btn = document.querySelector(".modals .next_btn");
 // agregando a la cesta
 let botonMenos = document.getElementById("button-addon1");
 let botonMas = document.getElementById("button-addon2");
@@ -33,8 +40,29 @@ let cart_checkout = document.querySelector(".cart_checkout");
 
 // Modificando Imagenes
 let imagenDefault = document.querySelector(".active");
+let modals_imagenDefault = document.querySelector(".modals .modals_active");
 imagenGrande.src = imagenDefault.src;
+modals_imagenGrande.src = modals_imagenDefault.src;
 let i = imagenDefault.id;
+let mi = modals_imagenDefault.id;
+// Mostrar Modal slider
+let mql = window.matchMedia("(min-width: 768px)");
+let modals = document.querySelector(".modals")
+imagenGrande.addEventListener("click", () => {
+  if (mql.matches) {
+    modals.style.display = "grid"; 
+  }
+});
+// Ocultar Modal slider
+modals.addEventListener("click", (e) => {
+  if (
+    e.target.classList == "modals" ||
+    e.target.classList == "content_modal" ||
+    e.target.classList == "close_modal"
+  ) {
+    modals.style.display = "none";
+  }
+})
 // modificando las imagenes pouch
 imagenChica.addEventListener("click", (e) => {
   for (let i = 0; i < imagencita.length; i++) {
@@ -43,6 +71,17 @@ imagenChica.addEventListener("click", (e) => {
   }
   e.target.classList.add("active");
   imagenGrande.src = e.target.src;
+  e.target.style.opacity = "50%";
+  i = e.target.id;
+});
+// modificando las imagenes modals pouch
+modals_imagenChica.addEventListener("click", (e) => {
+  for (let i = 0; i < modals_imagencita.length; i++) {
+    modals_imagencita[i].classList.remove("modals_active");
+    modals_imagencita[i].style.opacity = "1";
+  }
+  e.target.classList.add("modals_active");
+  modals_imagenGrande.src = e.target.src;
   e.target.style.opacity = "50%";
   i = e.target.id;
 });
@@ -55,6 +94,17 @@ slide_btn.addEventListener("click", (e) => {
   if (e.target == next_btn) {
     cambiarImagenNext(e);
     limpiarStyle();
+  }
+});
+// modificando las imagenes modals slider
+modals_slide_btn.addEventListener("click", (e) => {
+  if (e.target == modals_previous_btn) {
+    modals_cambiarImagenPrevious(e);
+    modals_limpiarStyle();
+  }
+  if (e.target == modals_next_btn) {
+    modals_cambiarImagenNext(e);
+    modals_limpiarStyle();
   }
 });
 // insertar al carrito
@@ -145,4 +195,33 @@ function cambiarImagenNext(e) {
   imagencita[i].classList.add("active");
   let imagenDefault = document.querySelector(".active");
   imagenGrande.src = imagenDefault.src;
+}
+// modificando las imagenes modals slider
+function modals_limpiarStyle() {
+  for (let mi = 0;mi < modals_imagencita.length; mi++) {
+    modals_imagencita[mi].style.opacity = "1";
+  }
+  modals_imagencita[mi].style.opacity = "50%";
+}
+function modals_cambiarImagenPrevious(e) {
+  e.preventDefault();
+  modals_imagencita[mi].classList.remove("modals_active");
+  mi--;
+  if (mi < 0) {
+    mi = modals_imagencita.length - 1;
+  }
+  modals_imagencita[mi].classList.add("modals_active");
+  let modals_imagenDefault = document.querySelector(".modals_active");
+  modals_imagenGrande.src = modals_imagenDefault.src;
+}
+function modals_cambiarImagenNext(e) {
+  e.preventDefault();
+  modals_imagencita[mi].classList.remove("modals_active");
+  mi++;
+  if (mi == modals_imagencita.length) {
+    mi = 0;
+  }
+  modals_imagencita[mi].classList.add("modals_active");
+  let modals_imagenDefault = document.querySelector(".modals_active");
+  modals_imagenGrande.src = modals_imagenDefault.src;
 }
